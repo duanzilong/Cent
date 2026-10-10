@@ -59,5 +59,17 @@ self.fetch = async (url: RequestInfo | URL, options: RequestInit = {}) => {
 // 注册中间件
 registerProxy(relayrMiddleware);
 
+// 新加
+const LOGIN_API_HOST = import.meta.env.VITE_LOGIN_API_HOST;
+registerProxy((url, options, next) => {
+  const target = typeof url === "string" ? url : url.toString();
+  if (target.startsWith("https://api.github.com")) {
+    const proxyUrl = new URL(`${LOGIN_API_HOST}/api/proxy`);
+    proxyUrl.searchParams.set("url", target);
+    return next(proxyUrl.toString(), options);
+  }
+  return next(url, options);
+});
+
 // 导出 registerProxy
 export { registerProxy };
