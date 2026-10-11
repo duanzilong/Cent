@@ -16,7 +16,7 @@ export type PromotionItem = {
 
 // 只有第一条会展示
 const WhatsNew: (PromotionItem & { action?: () => void })[] = [
-    {
+  /*  {
         id: "cent-app-published",
         label: "cent-app-published",
         action: () => {
@@ -25,7 +25,7 @@ const WhatsNew: (PromotionItem & { action?: () => void })[] = [
                 "_blank",
             );
         },
-    },
+    },*/
     {
         id: "zen-mode-released",
         label: "zen-mode-released",
@@ -136,7 +136,7 @@ export function Promotion() {
         ...(dynamicPromotionIds?.map((p) =>
             AllPromotions.find((v) => v.id === p),
         ) ?? []),
-        WhatsNew[0],
+     //   WhatsNew[0],
     ].filter((v) => v !== undefined);
 
     const promotions = allPromotions.filter((v) => !closed?.includes(v.id));
