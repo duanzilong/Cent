@@ -12,7 +12,6 @@ import modal from "../modal";
 import ScheduledSettingsItems from "../scheduled/settings-item";
 import { Button } from "../ui/button";
 import WidgetSettings from "../widget";
-import AboutSettingsItem, { AdvancedGuideItem } from "./about";
 import AgentApiSettingsItem from "./agent-api";
 import AssistantSettingsItem from "./assistant";
 import LabSettingsItem from "./lab";
