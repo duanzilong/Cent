@@ -135,8 +135,8 @@ export default function AboutSettingsItem() {
     );
 }
 
-/*export function AdvancedGuideItem() {
-    const t = useIntl();
+export function AdvancedGuideItem() {
+    /*const t = useIntl();
     return (
         <div className="lab">
             <a
@@ -154,5 +154,5 @@ export default function AboutSettingsItem() {
                 </div>
             </a>
         </div>
-    );
-}*/
+    );*/
+}
