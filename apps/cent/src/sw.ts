@@ -65,3 +65,24 @@ registerRoute(
         ],
     }),
 );
+
+// GitHub 头像 / 资产图片走后端代理（绕过本机 loopback 拦截）
+const LOGIN_API_HOST = import.meta.env.VITE_LOGIN_API_HOST;
+
+registerRoute(
+    ({ url }) =>
+        url.href.startsWith("https://avatars.githubusercontent.com") ||
+        url.href.startsWith("https://raw.githubusercontent.com"),
+    async ({ url, request }) => {
+        if (!LOGIN_API_HOST) {
+            return fetch(request);
+        }
+        const proxyUrl = new URL(`${LOGIN_API_HOST}/api/proxy`);
+        proxyUrl.searchParams.set("url", url.href);
+        return fetch(proxyUrl.toString(), {
+            headers: {
+                Accept: request.headers.get("Accept") ?? "*/*",
+            },
+        });
+    },
+);
