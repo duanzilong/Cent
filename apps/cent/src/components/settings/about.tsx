@@ -64,7 +64,7 @@ function Form({ onCancel }: { onCancel?: () => void }) {
                     </div>
                     <i className="icon-[mdi--arrow-top-right]"></i>
                 </a>
-                //<SponsorAboutItem />
+                /*<SponsorAboutItem />*/
                 <div className="w-full flex flex-col items-center gap-3 px-4 pb-4">
                     <div className="text-sm text-foreground/80">
                         {t("download-app")}
