@@ -4,7 +4,7 @@ import { useIntl } from "@/locale";
 import { isMeasurementEnabled } from "@/measurement";
 
 import createConfirmProvider from "../confirm";
-/*import { SponsorAboutItem } from "../sponsor";*/
+
 import { Button } from "../ui/button";
 import Version from "./version";
 
@@ -64,7 +64,7 @@ function Form({ onCancel }: { onCancel?: () => void }) {
                     </div>
                     <i className="icon-[mdi--arrow-top-right]"></i>
                 </a>
-                /*<SponsorAboutItem />*/
+
                 <div className="w-full flex flex-col items-center gap-3 px-4 pb-4">
                     <div className="text-sm text-foreground/80">
                         {t("download-app")}
