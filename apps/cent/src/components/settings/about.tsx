@@ -135,10 +135,10 @@ export default function AboutSettingsItem() {
     );
 }
 
-export function AdvancedGuideItem() {
+export function AdvancedGuideItem() {/*
     const t = useIntl();
     return (
-        /*<div className="lab">
+        <div className="lab">
             <a
                 href="https://glink25.github.io/post/Cent%E9%AB%98%E7%BA%A7%E8%AE%B0%E8%B4%A6%E6%8C%87%E5%8D%97/"
                 target="_blank"
@@ -153,6 +153,6 @@ export function AdvancedGuideItem() {
                     <i className="icon-[mdi--chevron-right] size-5"></i>
                 </div>
             </a>
-        </div>*/
+        </div>
     );
-}
+*/}
