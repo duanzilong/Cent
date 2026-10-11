@@ -157,7 +157,7 @@ export default function SettingsForm({
                             <AboutSettingsItem />
                             <ThemeSettingsItem />
                             <LanguageSettingsItem />
-                            <AdvancedGuideItem />
+                            //<AdvancedGuideItem />
                         </div>
                     </div>
                 </div>
