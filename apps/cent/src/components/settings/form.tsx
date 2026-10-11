@@ -12,7 +12,7 @@ import modal from "../modal";
 import ScheduledSettingsItems from "../scheduled/settings-item";
 import { Button } from "../ui/button";
 import WidgetSettings from "../widget";
-import AboutSettingsItem, { AdvancedGuideItem } from "./about";
+import AboutSettingsItem from "./about";
 import AgentApiSettingsItem from "./agent-api";
 import AssistantSettingsItem from "./assistant";
 import LabSettingsItem from "./lab";
@@ -157,7 +157,6 @@ export default function SettingsForm({
                             <AboutSettingsItem />
                             <ThemeSettingsItem />
                             <LanguageSettingsItem />
-                            <AdvancedGuideItem />
                         </div>
                     </div>
                 </div>
